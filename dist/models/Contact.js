@@ -23,6 +23,12 @@ const ContactSchema = new mongoose_1.Schema({
         unique: true,
         lowercase: true,
         trim: true
+    },
+    photo: {
+        type: String
+    },
+    role: {
+        type: String
     }
 });
 exports.default = (0, mongoose_1.model)('Contact', ContactSchema);

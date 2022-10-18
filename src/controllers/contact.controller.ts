@@ -27,8 +27,8 @@ export const getAllContacts = async (req: Request, res: Response): Promise<Respo
 
 export const createContact = async (req: Request, res: Response): Promise<Response> => {
     try {
-        const { name, lastname, business, phone, email } = req.body;
-        const newContact = new Contact({ name, lastname, business, phone, email });
+        const { name, lastname, business, phone, email, role, photo } = req.body;
+        const newContact = new Contact({ name, lastname, business, phone, email, role, photo });
         const contactSaved = await newContact.save();
         return res.json(contactSaved);
     } catch (error) {

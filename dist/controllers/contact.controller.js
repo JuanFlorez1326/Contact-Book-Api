@@ -42,8 +42,8 @@ const getAllContacts = (req, res) => __awaiter(void 0, void 0, void 0, function*
 exports.getAllContacts = getAllContacts;
 const createContact = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name, lastname, business, phone, email } = req.body;
-        const newContact = new Contact_1.default({ name, lastname, business, phone, email });
+        const { name, lastname, business, phone, email, role, photo } = req.body;
+        const newContact = new Contact_1.default({ name, lastname, business, phone, email, role, photo });
         const contactSaved = yield newContact.save();
         return res.json(contactSaved);
     }
