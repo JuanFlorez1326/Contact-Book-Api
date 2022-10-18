@@ -6,6 +6,8 @@ export interface IContact extends Document {
     business: string;
     phone: string;
     email: string;
+    image: string;
+    role: string;
 }
 
 const ContactSchema = new Schema ({
@@ -30,6 +32,12 @@ const ContactSchema = new Schema ({
         unique: true,
         lowercase: true,
         trim: true
+    },
+    photo: {
+        type: String
+    },
+    role: {
+        type: String
     }
 });
 
